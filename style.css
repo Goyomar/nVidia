@@ -1,0 +1,287 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid black;    */
+
+}
+
+body{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin:auto;
+    max-width: 1024px;
+}
+
+/* HEADER */
+#home{
+    margin-bottom: 10px;
+}
+
+nav{
+    display: flex;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 60px;
+}
+
+nav ul li{
+    align-self: center;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* FIGURE */
+
+header figure{
+    margin:0;
+}
+
+#banner{
+    width: 100%;
+    height:400px;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+header figure figcaption{
+    height:15px;
+}
+
+header figure figcaption p{
+    background-color: #00640099;
+    color: #FFFFFF;
+    margin:0;
+    padding: 15px;
+    position: relative;
+    bottom: 48px;
+}
+
+header figure figcaption p a{
+    text-decoration: none;
+    background-color: #76b900;
+    color: #FFFFFF;
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+/* MAIN */
+
+main{
+    display:flex;
+    margin-left: 5px;
+    border-bottom: 2px solid #76b900;
+}
+
+/* ARTICLE */
+
+main article{
+    flex: 2;
+    
+}
+
+#logoTitre{
+    border: 1px solid black;
+    vertical-align: bottom;
+    height: 1em;
+}
+
+/* ASIDE */
+aside{
+    background-color: #76b900;
+    color: #FFFFFF;
+    flex: 1;
+    margin-left: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main aside h2{
+    text-align: center;
+}
+
+#logoAside{
+    text-align: center;
+}
+
+main aside p{
+    margin-left: 15px;
+}
+
+#Reseaux{
+    display: flex;
+    text-align: center;
+    margin:0 10% 15px 10%;
+}
+
+#Reseaux a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-self: center;
+}
+
+/* FLECHE */
+
+#fleche{
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+}
+
+footer section{
+    width:33%;
+}
+
+/* NEWSLETTER */
+
+#Newsletter{
+    margin-left: 5px;
+}
+
+input{
+    padding: 8px 10px;
+    border-radius: 0px;
+    border:3px solid lightgray;
+}
+
+button{
+    background-color: #76b900;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 15px;
+}
+
+/* GALERIE */
+
+#Galerie{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+}
+
+#Galerie img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+/* PARTENAIRES */
+
+#Partenaires{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+#Partenaires img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+@media screen and (max-width:1200px) 
+{
+    #Newsletter form input{
+        margin-bottom: 10px;
+    }
+
+    #Galerie{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:850px)
+{
+    main{
+        flex-direction: column;
+    }
+
+    main article{
+        width:100%;
+    }
+
+    aside{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #Partenaires{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:600px)
+{
+    #SectionGalerie{
+        width:100px;
+    }
+
+    #Galerie{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #Partenaires{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header figure{
+        display: none;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        top:10px;
+    }
+    header nav ul li{
+        margin-bottom: 1em;
+    }
+
+    #asideTop{
+        display: none;
+    }
+
+    #Reseaux{
+        padding-top: 1em;
+    }
+
+    #Newsletter{
+        width:50%;
+    }
+
+    #SectionGalerie{
+        display: none;
+    }
+
+    section:nth-child(3){
+        width:50%;
+        margin-left: 30px;
+    }
+}
